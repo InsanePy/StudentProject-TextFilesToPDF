@@ -11,7 +11,7 @@ for filepath in filepaths:
     pdf.add_page()
     pdf.set_font(family="Times", style="B", size=15)
     pdf.cell(w=0, h=15, txt=f"{name}", ln=1)
-    with open(filepath) as file:
+    with open(filepath, 'r') as file:
         content = file.read()
     pdf.set_font(family="Times", style="B", size=10)
     pdf.set_text_color(80, 80, 80)
